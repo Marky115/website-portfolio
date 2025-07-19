@@ -33,12 +33,12 @@ export default function Home() {
         
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
           {[
-            { src: "homepage-Img/html.webp", alt: "HTML" },
-            { src: "homepage-Img/css.webp", alt: "CSS" },
-            { src: "homepage-Img/js.webp", alt: "JavaScript" },
-            { src: "homepage-Img/react.webp", alt: "React" },
-            { src: "homepage-Img/git.webp", alt: "Git" },
-            { src: "homepage-Img/github.webp", alt: "GitHub" },
+            { src: "/homepage-Img/html.webp", alt: "HTML" },
+            { src: "/homepage-Img/css.webp", alt: "CSS" },
+            { src: "/homepage-Img/js.webp", alt: "JavaScript" },
+            { src: "/homepage-Img/react.webp", alt: "React" },
+            { src: "/homepage-Img/git.webp", alt: "Git" },
+            { src: "/homepage-Img/github.webp", alt: "GitHub" },
           ].map((tech, i) => (
             <div key={i} className="group relative flex flex-col items-center justify-center">
               <Image
