@@ -3,9 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { SiPhp, SiMysql } from 'react-icons/si';
+import { getImagePath } from '../utils/imagePath'; 
 
 export default function HerbProjectSection() {
-    const tools = [
+  const tools = [
     { name: 'PHP', icon: <SiPhp className="text-purple-700" /> },
     { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
     { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
@@ -31,7 +32,7 @@ export default function HerbProjectSection() {
       {/* Preview Image */}
       <div className="relative w-full h-auto mb-12">
         <Image
-          src="/Proj2-Img/home.webp"
+          src={getImagePath("/Proj2-Img/home.webp")}
           alt="herb Mockup"
           width={1200}
           height={800}
@@ -108,7 +109,7 @@ export default function HerbProjectSection() {
               }`}
             >
               <Image
-                src={src}
+                src={getImagePath(src)}
                 alt={`Herb Mockup ${index + 1}`}
                 width={1200}
                 height={800}

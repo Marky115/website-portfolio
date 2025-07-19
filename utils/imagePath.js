@@ -8,7 +8,7 @@ export const getImagePath = (imagePath) => {
   return `${basePath}/${cleanPath}`;
 };
 
-// Alternative: You can also create this as a hook
+
 import { useMemo } from 'react';
 
 export const useImagePath = (imagePath) => {

@@ -32,7 +32,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold text-start text-[#102E2A] mb-10 border-t pt-2">My Stack</h2>
 
         
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
+       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
           {[
             { src: "/homepage-Img/html.webp", alt: "HTML" },
             { src: "/homepage-Img/css.webp", alt: "CSS" },
@@ -43,13 +43,12 @@ export default function Home() {
           ].map((tech, i) => (
             <div key={i} className="group relative flex flex-col items-center justify-center">
               <Image
-                src={`/${tech.src}`}
+                src={getImagePath(tech.src)}
                 alt={tech.alt}
                 width={64}
                 height={64}
                 className="transition-transform duration-200 transform group-hover:scale-110"
               />
-
             </div>
           ))}
         </div>
@@ -107,7 +106,7 @@ export default function Home() {
         {/* Full Image (not cropped) */}
         <div className="bg-white">
           <Image
-            src="/Proj1-Img/peakPerformance.png"
+            src={getImagePath("/Proj1-Img/peakPerformance.png")}
             alt="Project Screenshot"
             width={1100}
             height={600}
@@ -165,7 +164,7 @@ export default function Home() {
           </div>
           
           <div className='md:w-1/2'> 
-            <Image src="/homepage-Img/me.webp" alt="about me" width={300} height={346} className='rounded-xl w-full h-full'/>
+            <Image src={getImagePath("/homepage-Img/me.webp")} alt="about me" width={300} height={346} className='rounded-xl w-full h-full'/>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Carousel} from 'react-bootstrap';
+import { getImagePath } from '@/utils/imagePath';
 
 export default function SportsApparelProject() {
   
@@ -13,7 +14,7 @@ export default function SportsApparelProject() {
       <section className="space-y-6 max-w-5xl mx-auto text-center bg-[#F7F3EC]">
         <div className="relative w-full h-auto bg-[#F7f3ec]">
           <Image
-            src="/Proj1-Img/mockup.png"
+            src={getImagePath("/Proj1-Img/mockup.png")}
             alt="PeakPerformance Sports Apparel Mockup"
             width={1200}
             height={800}
@@ -88,16 +89,16 @@ export default function SportsApparelProject() {
         <div className="relative w-full max-w-5xl mx-auto mb-12 mt-10">
           <Carousel ref={carouselRef} controls={false} indicators={true} className="rounded-xl overflow-hidden shadow-lg bg-black p-10">
             <Carousel.Item>
-              <img src="/Proj1-Img/checkout.webp" alt="checkout page" className ="w-full h-full"/>
+              <img src={getImagePath("/Proj1-Img/checkout.webp")} alt="checkout page" className ="w-full h-full"/>
             </Carousel.Item>
             <Carousel.Item>
-              <img src="/Proj1-Img/confirmation.webp" alt="checkout page" className ="w-full h-full"/>
+              <img src={getImagePath("/Proj1-Img/confirmation.webp")} alt="checkout page" className ="w-full h-full"/>
             </Carousel.Item>
               <Carousel.Item>
-              <img src="/Proj1-Img/shop.webp" alt="checkout page" className ="w-full h-full"/>
+              <img src={getImagePath("/Proj1-Img/shop.webp")} alt="checkout page" className ="w-full h-full"/>
             </Carousel.Item>
               <Carousel.Item>
-              <img src="/Proj1-Img/contact.webp" alt="checkout page" className ="w-full h-full"/>
+              <img src={getImagePath("/Proj1-Img/contact.webp")} alt="checkout page" className ="w-full h-full"/>
             </Carousel.Item>
           </Carousel>
 
