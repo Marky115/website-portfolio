@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { SiPhp, SiMysql } from 'react-icons/si';
-import { getImagePath } from '../utils/imagePath'; 
+import { getImagePath } from '../../utils/imagePath';
 
 export default function HerbProjectSection() {
   const tools = [

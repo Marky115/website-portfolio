@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Carousel} from 'react-bootstrap';
-import { getImagePath } from '@/utils/imagePath';
+import { getImagePath } from '../../utils/imagePath';
 
 export default function SportsApparelProject() {
   
