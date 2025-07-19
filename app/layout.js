@@ -1,5 +1,16 @@
+//page layouts for header and footer
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import Link from 'next/link';
+
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +29,61 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+     <html lang="en">
+      <head> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></link>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
       >
-        {children}
+        <header className="sticky top-0 z-50">
+          <nav className="flex items-center justify-between px-8 py-7 shadow-sm bg-[#F7F3EC]">
+            <Link href="/" className="text-[#102E2A] hover:text-[#2D5A52] no-underline text-lg font-semibold ml-4">
+              Mark Soh, <span className="text-gray-400">Vancouver BC</span>
+            </Link>
+            <ul className="flex space-x-8">
+              <li>
+                <Link href="/" className="relative text-black no-underline after:block after:h-0.5 after:bg-blue-700 after:scale-x-0 hover:after:scale-x-80 after:transition-transform after:duration-300 after:origin-left">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="relative text-black no-underline after:block after:h-0.5 after:bg-blue-700 after:scale-x-0 hover:after:scale-x-80 after:transition-transform after:duration-300 after:origin-left">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="https://docs.google.com/document/d/1oEjEk2XybhhTcIwsoIuZubYah4_OCeX-jxv8Ln3PSrw/edit?tab=t.0" target="_blank" className="relative text-black no-underline after:block after:h-0.5 after:bg-blue-700 after:scale-x-0 hover:after:scale-x-80 after:transition-transform after:duration-300 after:origin-left">
+                  Resume
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        
+        <main className="flex-grow">
+          {children}
+        </main>
+        
+        <footer className="mt-auto border-t-2 shadow-sm">
+          <div className="bg-[#F7F3EC] shadow-sm p-6 text-center text-black">
+            <div className="flex flex-col items-center gap-2 mb-2">
+              <Link href="#header" className="text-xl font-bold text-[#102E2A] mt-3">
+                Mark Soh
+              </Link>
+              <div className="flex space-x-4 text-4xl text-gray-700">
+                <Link href="https://github.com/Marky115" target="_blank" className="hover:text-black">
+                  <i className="bi bi-github"></i>
+                </Link>
+                <Link href="http://www.linkedin.com/in/mark-soh115" target="_blank" className="hover:text-blue-700">
+                  <i className="bi bi-linkedin"></i>
+                </Link>
+              </div>
+              <p className="text-sm">Design and Handcoded by Me</p>
+              <p className="text-sm">© 2025 Mark Soh. All rights reserved.</p>
+            </div>
+          </div> 
+        </footer>
       </body>
     </html>
   );
