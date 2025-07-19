@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link"
 import { motion } from 'framer-motion';
+import { getImagePath } from '../utils/imagePath'; 
 
 export default function Home() {
   
@@ -63,8 +64,8 @@ export default function Home() {
       <div className="w-full max-w-5xl rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-white mb-12">
         {/* Full Image (not cropped) */}
         <div className="bg-white">
-          <Image
-            src="/Proj2-Img/mockup.webp"
+           <Image
+            src={getImagePath("/Proj2-Img/mockup.webp")}
             alt="Project Screenshot"
             width={1200}
             height={600}
