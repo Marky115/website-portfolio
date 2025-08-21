@@ -147,7 +147,7 @@ export default function Home() {
         {/* Full Image (not cropped) */}
         <div className="bg-white">
           <Image
-            src={getImagePath("/Proj3-Img/PokemonBefore.webp")}
+            src={getImagePath("/Proj3-Img/pokemonAfter.png")}
             alt="Project Screenshot"
             width={1100}
             height={600}
