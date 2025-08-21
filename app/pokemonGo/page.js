@@ -71,7 +71,7 @@ export default function PokemonGoProject() {
                     Before
                 </figcaption>
                 <Image
-                    src={getImagePath("/Proj3-Img/PokemonBefore.webp")}
+                    src={getImagePath("/Proj3-Img/PokemonBefore.png")}
                     alt="Before - Pokémon Type Calculator"
                     className="rounded-lg shadow-lg"
                     width={800}   
@@ -84,7 +84,7 @@ export default function PokemonGoProject() {
                     After
                 </figcaption>
                 <Image
-                    src={getImagePath("/Proj3-Img/PokemonAfter.webp")}
+                    src={getImagePath("/Proj3-Img/PokemonAfter.png")}
                     alt="After - Pokémon Type Calculator"
                     className="rounded-lg shadow-lg"
                     width={800}  
