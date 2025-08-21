@@ -142,6 +142,44 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Project 3 */}
+      <div className="w-full max-w-5xl rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-white mb-12">
+        {/* Full Image (not cropped) */}
+        <div className="bg-white">
+          <Image
+            src={getImagePath("/Proj3-Img/PokemonBefore.webp")}
+            alt="Project Screenshot"
+            width={1100}
+            height={600}
+            className="w-full h-auto object-contain"
+            priority
+          />
+        </div>
+
+    
+
+        <div className="p-8">
+          <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
+            Github
+          </span>
+
+          <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
+            Git
+          </span>
+
+          <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
+            TypeScript
+          </span>
+
+          <h3 className="text-2xl font-bold text-[#102E2A] mb-3">
+            Pokémon Type Calculator
+          </h3>
+
+          <Link href="/pokemonGo" className="text-base font-medium text-blue-600 hover:underline flex items-center gap-1">
+            View Project <span>↗</span>
+          </Link>
+        </div>
+      </div>
      
     </div>
     
