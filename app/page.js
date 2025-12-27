@@ -147,7 +147,7 @@ export default function Home() {
         {/* Full Image (not cropped) */}
         <div className="bg-white">
           <Image
-            src={getImagePath("/Proj3-Img/pokemonAfter.png")}
+            src={getImagePath("/Proj3-Img/homescreen.png")}
             alt="Project Screenshot"
             width={1100}
             height={600}
@@ -160,22 +160,22 @@ export default function Home() {
 
         <div className="p-8">
           <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
-            Github
+            Mobile Dev
           </span>
 
           <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
-            Git
+            API Integration
           </span>
 
           <span className="inline-block mb-3 mr-3 text-xs font-semibold uppercase tracking-wider bg-black text-white px-3 py-1 rounded">
-            TypeScript
+            Firebase Integration
           </span>
 
           <h3 className="text-2xl font-bold text-[#102E2A] mb-3">
-            Pokémon Type Calculator
+            SunWise UV App
           </h3>
 
-          <Link href="/pokemonGo" className="text-base font-medium text-blue-600 hover:underline flex items-center gap-1">
+          <Link href="/SunWise" className="text-base font-medium text-blue-600 hover:underline flex items-center gap-1">
             View Project <span>↗</span>
           </Link>
         </div>
